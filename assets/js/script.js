@@ -1,16 +1,12 @@
-// Need a button that starts a timer and also changes the screen. Changing screen can be done by changing the CSS property to alter the visibility to hidden. 
-
-
-// Each question can be four buttons that you can click that have if else statements to show incorrect or correct based on if the correct button is clicked. If correct button is clicked, I'll need to have that counted. 
-
 // Selects element by class
 // var timeEl = document.querySelector(".time");
 var timeEl = document.getElementById("timer");
+var startButton = document.getElementById("start-button")
 
 // Selects element by id
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 5;
+var secondsLeft = 60;
 
 function setTime() {
   // Sets interval in variable
@@ -37,4 +33,7 @@ function sendMessage() {
 
 }
 
-setTime();
+// setTime();
+
+// Add event listener to generate button
+startButton.addEventListener("click", setTime);
