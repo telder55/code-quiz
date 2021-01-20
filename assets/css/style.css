@@ -7,7 +7,25 @@ button {
     flex: auto;
 }
 
-.quiz-content {
+.quiz-area {
     margin-top: 20px;
     text-align: center;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+
 }
+
+.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+#quiz-start {
+    /* visibility: hidden; */
+}
+
+#q1 {
+    /* visibility: hidden; */
+}
+
