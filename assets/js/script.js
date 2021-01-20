@@ -18,6 +18,12 @@ function removeQ1correct() {
   q1.classList.remove("active");
   addQ2 ();
 }
+// Remove Question 1 Incorrect
+function removeQ1incorrect() {
+  q1.classList.remove("active");
+  addQ2 ();
+}
+
 
 // Add Question 1
 function addQ1() {
@@ -55,7 +61,4 @@ function setTime() {
 // startButton.addEventListener("click", removeStart);
 startButton.addEventListener("click", setTime);
 correctAnswer.addEventListener("click", removeQ1correct );
-incorrectAnswer.addEventListener("click", removeQ1wrong );
-
-
-
+incorrectAnswer.addEventListener("click", removeQ1incorrect );
