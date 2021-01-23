@@ -13,7 +13,10 @@ button {
     position: absolute;
     visibility: hidden;
     opacity: 0;
+}
 
+li {
+    text-align: left;
 }
 
 .active {
