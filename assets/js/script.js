@@ -1,9 +1,9 @@
-// Timer Variables
-var timeEl = document.getElementById("timer");
-var secondsLeft = 60;
-
 // Start Button Variable
 var startButton = document.getElementById("start-button");
+
+// High Scores Variable 
+var highScores = document.getElementById("scores-link");
+var highScoresDiv = document.getElementById("high-scores");
 
 // variable for answers
 var correctAnswer = document.querySelectorAll(".correct")
@@ -17,27 +17,45 @@ incorrectAnswer.forEach(element => {
 // Listen to click for answers that have class of Correct
 correctAnswer.forEach(element => {
     element.addEventListener("click", changeQCorrect); 
+    
 });
 
 // Change Question when Incorrect
 function changeQIncorrect() {
     changeQ();
-    console.log("This is working incorrect");
+
+    // Subtract 5 Seconds
+    secondsLeft -= 5;
+
   }
 
 // Change Question when Correct
 function changeQCorrect() {
     changeQ();
-    console.log("This is working correct");
   }
 
 // Changes to next question 
 function changeQ() {
-    var nextQ2 = document.querySelector(".active").nextElementSibling;
-    nextQ2.classList.add("active");
+    var nextQ = document.querySelector(".active").nextElementSibling;
+    nextQ.classList.add("active");
     var removePrevious = document.querySelector(".active");
     removePrevious.classList.remove("active");
   }
+
+// High Scores link
+highScores.addEventListener("click", scoreScreen);
+
+//Remove all active class
+function scoreScreen() {
+    console.log("hey there bud");
+    highScoresDiv.classList.add("active");
+    var removeAllActive = document.querySelector(".active")
+    removeAllActive.classList.remove("active");
+}
+
+// Timer Variables
+var timeEl = document.getElementById("timer");
+var secondsLeft = 60;
 
 function setTime() {
   // Calls changeQ function
@@ -46,6 +64,8 @@ function setTime() {
   var timerInterval = setInterval(function() {
     secondsLeft--;
     timeEl.textContent = secondsLeft;
+
+
 
     if(secondsLeft === 0) {
       // Stops execution of action at set interval
