@@ -182,6 +182,7 @@ function storeHighscores(initials, score){
            
     }
     highScores.classList.add("hidden");
+    messageArea.classList.add("hidden");
 
     console.log(getScore);
 };
