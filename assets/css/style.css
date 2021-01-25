@@ -32,6 +32,11 @@ li {
     visibility: visible;
 }
 
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .quiz-screen {
     position: relative;
 }

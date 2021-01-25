@@ -46,7 +46,7 @@ correctAnswer.forEach(element => {
 // Change Question when Incorrect
 function changeQIncorrect() {
     changeQ();
-    messageArea.textContent = "Oh No!!";
+    messageArea.textContent = "INCORRECT! -5 Sec!";
 
     // Subtract 5 Seconds
     secondsLeft -= 5;
@@ -56,7 +56,7 @@ function changeQIncorrect() {
 // Change Question when Correct
 function changeQCorrect() {
     changeQ();
-    messageArea.textContent = "Nice!";
+    messageArea.textContent = "CORRECT!";
   }
 
 // Changes to next question 
@@ -69,10 +69,12 @@ function changeQ() {
 
 //Remove all active class
 function scoreScreen() {
-    highScoresDiv.classList.add("active");
+    
     var removeAllActive = document.querySelector(".active")
     removeAllActive.classList.remove("active");
     storeHighscores("", "");
+    highScoresDiv.classList.add("active");
+    
 
 }
 
@@ -148,7 +150,7 @@ function storeHighscores(initials, score){
         Initials: initials,
         Score: score
     };
-    console.log(highScoresArray);
+   
     highScoresArray.push(getScore);
     // Stringify Highscores Array
     localStorage.setItem("High Scores", JSON.stringify(highScoresArray));
@@ -179,6 +181,7 @@ function storeHighscores(initials, score){
       }
            
     }
+    highScores.classList.add("hidden");
 
     console.log(getScore);
 };
