@@ -18,12 +18,18 @@
                 <button id="scores-link" type="button" class="btn btn-outline-primary correct">View High Scores</button>
             </span>
             <span class="navbar-text">
-                Time: <span id="timer">60</span>
+                Time: <span id="timer">30</span>
             </span>
+            <div class = "row">
+                <div class="col-xs-12 col-md-12">
+                    <h3 id="message-area">Message Area</h3>
+                </div>
+        
+            </div>
         </div>
     </nav>
     <div id="quiz-screen">
-        <div class="row quiz-area active" id="quiz-start">
+        <div class="row quiz-area active">
             <h1>TJ's Coding Quiz</h1>
             <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-12 col-md-6">
@@ -34,7 +40,7 @@
             </div>
             <div class="col-xs-0 col-md-3"></div>
         </div>
-        <div class="row quiz-area" id="q1">
+        <div class="row quiz-area">
             <h1>Question 1</h1>
             <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-12 col-md-6">
@@ -46,7 +52,7 @@
             </div>
             <div class="col-xs-0 col-md-3"></div>
         </div>
-        <div class="row quiz-area" id="q2">
+        <div class="row quiz-area">
             <h1>Question 2</h1>
             <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-12 col-md-6">
@@ -58,7 +64,7 @@
             </div>
             <div class="col-xs-0 col-md-3"></div>
         </div>
-        <div class="row quiz-area" id="q3">
+        <div class="row quiz-area">
             <h1>Question 3</h1>
             <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-12 col-md-6">
@@ -70,19 +76,38 @@
             </div>
             <div class="col-xs-0 col-md-3"></div>
         </div>
-        <div class="row quiz-area" id="q4">
+        <div class="row quiz-area">
             <h1>Question 4</h1>
             <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-12 col-md-6">
                 <p>What is 4 + 4?</p>
-                <button type="button" class="btn btn-outline-primary incorrect">10</button>
-                <button type="button" class="btn btn-outline-primary incorrect">9</button>
-                <button type="button" id="correct4" class="btn btn-outline-primary correct">8</button>
-                <button type="button" class="btn btn-outline-primary incorrect">7</button>
+                <button id="last-q-1" type="button" class="btn btn-outline-primary incorrect">10</button>
+                <button id="last-q-2" type="button" class="btn btn-outline-primary incorrect">9</button>
+                <button id="last-q-3" type="button" id="correct4" class="btn btn-outline-primary correct">8</button>
+                <button id="last-q-4" type="button" class="btn btn-outline-primary incorrect">7</button>
             </div>
             <div class="col-xs-0 col-md-3"></div>
         </div>
-        <div class="row quiz-area" id="high-scores">
+        <div class="row quiz-area2" id="">
+            <h1>TJ's Coding Quiz - Enter Your Initials</h1>
+            <div class="col-xs-0 col-md-3"></div>
+            
+            <div class="col-xs-12 col-md-6">
+                <p>Try to answer the following coding related questions before time runs out. Each incorrect answer will
+                    reduce the amount of time left by 5 seconds.
+                </p>
+
+                <form id="highscore-form" action="">
+                    <label for="initials">Enter Initials:</label>
+                    <input name="" id="initials" cols="30" rows="1"></input>
+                    <br>
+                    <button type="submit" value="submit" class="btn btn-outline-primary" id="submit-button">Submit</button>              
+                </form>
+              
+            </div>
+            <div class="col-xs-0 col-md-3"></div>
+        </div>
+        <!-- <div class="row quiz-area" id="high-scores">
             <h1>TJ's Coding Quiz - High Scores</h1>
             <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-12 col-md-6">
@@ -90,13 +115,14 @@
                     <li>4</li>
                     <li>3</li>
                     <li>2</li>
-                    <li>1</li>
+                    <li>1</li>              
                 </ol>
             </div>
             <div class="col-xs-0 col-md-3"></div>
-        </div>
-
+        </div> -->
+        
     </div>
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
