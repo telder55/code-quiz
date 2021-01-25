@@ -151,6 +151,36 @@ function storeHighscores(initials, score){
     highScoresArray.push(getScore);
     // Stringify Highscores Array
     localStorage.setItem("High Scores", JSON.stringify(highScoresArray));
+
+    var highScoresList = document.getElementById("high-scores-list");
+
+
+    // Sort Array 
+
+    function compare( a, b ) {
+      if ( a.Score > b.Score ){
+        return -1;
+      }
+      if ( a.Score < b.Score ){
+        return 1;
+      }
+      return 0;
+    }
+    
+    highScoresArray.sort( compare );
+
+    // Loop through Array and Add Scores to List
+    for (var i = 0; i < highScoresArray.length; i++) {
+      var listItem = document.createElement("li");
+      listItem.innerText = highScoresArray[i].Initials + " " + highScoresArray[i].Score;
+      highScoresList.appendChild(listItem);
+
+
+      // set text to what i need to pull out from the high scores array inner text
+      //append the list item to high scores list append child
+      
+    }
+
     console.log(getScore);
 };
 
