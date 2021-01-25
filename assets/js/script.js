@@ -92,11 +92,10 @@ function setTime() {
     timeEl.textContent = secondsLeft;
 
     if(secondsLeft <= 0) {
-      // Stops execution of action at set interval
       secondsLeft = 0;
       clearInterval(timerInterval);
-      // Calls function to create and append image
-    //   sendMessage();
+      scoreScreen();
+   
     }
 
   }, 1000);
