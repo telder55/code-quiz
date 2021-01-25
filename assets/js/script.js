@@ -185,12 +185,3 @@ function storeHighscores(initials, score){
 
     console.log(getScore);
 };
-
-
-    // get the values from high score and initials
-
-    // can update this array to update high scores page
-    // after push into an array then 
-    // use document ready and if statement to look into local storage 
-
-    // event listener on form submit - preventdefault - store in intials vartiable
