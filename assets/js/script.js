@@ -69,10 +69,11 @@ function changeQ() {
 
 //Remove all active class
 function scoreScreen() {
-    console.log("hey there bud");
     highScoresDiv.classList.add("active");
     var removeAllActive = document.querySelector(".active")
     removeAllActive.classList.remove("active");
+    storeHighscores("", "");
+
 }
 
 // Timer Variables
@@ -171,14 +172,12 @@ function storeHighscores(initials, score){
 
     // Loop through Array and Add Scores to List
     for (var i = 0; i < highScoresArray.length; i++) {
-      var listItem = document.createElement("li");
-      listItem.innerText = highScoresArray[i].Initials + " " + highScoresArray[i].Score;
-      highScoresList.appendChild(listItem);
-
-
-      // set text to what i need to pull out from the high scores array inner text
-      //append the list item to high scores list append child
-      
+      if (highScoresArray[i].Score >= 1) {
+        var listItem = document.createElement("li");
+        listItem.innerText = highScoresArray[i].Initials + " " + highScoresArray[i].Score;
+        highScoresList.appendChild(listItem);
+      }
+           
     }
 
     console.log(getScore);
