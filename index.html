@@ -18,31 +18,29 @@
                 <button id="scores-link" type="button" class="btn btn-outline-primary correct">View High Scores</button>
             </span>
             <span class="navbar-text">
-                Time: <span id="timer">30</span>
+                Time: <span id="timer">60</span>
             </span>
             <div class = "row">
                 <div class="col-xs-12 col-md-12">
-                    <h3 id="message-area">Message Area</h3>
+                    <h3 id="message-area"></h3>
                 </div>
         
             </div>
         </div>
     </nav>
-    <div id="quiz-screen">
+    <div class="quiz-screen">
         <div class="row quiz-area active">
             <h1>TJ's Coding Quiz</h1>
-            <div class="col-xs-0 col-md-3"></div>
             <div class="col-xs-12 col-md-6">
                 <p>Try to answer the following coding related questions before time runs out. Each incorrect answer will
                     reduce the amount of time left by 5 seconds.
                 </p>
                 <button type="button" class="btn btn-outline-primary" id="start-button">Start Quiz</button>
             </div>
-            <div class="col-xs-0 col-md-3"></div>
         </div>
         <div class="row quiz-area">
             <h1>Question 1</h1>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
             <div class="col-xs-12 col-md-6">
                 <p>Which of the following would you use to log a message to the console?</p>
                 <button type="button" class="btn btn-outline-primary correct">Console.log()</button>
@@ -50,11 +48,11 @@
                 <button type="button" class="btn btn-outline-primary incorrect">Message.log()</button>
                 <button type="button" class="btn btn-outline-primary incorrect">Local.log()</button>
             </div>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
         </div>
         <div class="row quiz-area">
             <h1>Question 2</h1>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
             <div class="col-xs-12 col-md-6">
                 <p>What is 2 + 2?</p>
                 <button type="button" class="btn btn-outline-primary incorrect">3</button>
@@ -62,11 +60,11 @@
                 <button type="button" class="btn btn-outline-primary incorrect">5</button>
                 <button type="button" class="btn btn-outline-primary incorrect">6</button>
             </div>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
         </div>
         <div class="row quiz-area">
             <h1>Question 3</h1>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
             <div class="col-xs-12 col-md-6">
                 <p>What is 3 + 3?</p>
                 <button type="button" class="btn btn-outline-primary incorrect">3</button>
@@ -74,11 +72,11 @@
                 <button type="button" class="btn btn-outline-primary incorrect">5</button>
                 <button type="button" id="correct3" class="btn btn-outline-primary correct">6</button>
             </div>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
         </div>
         <div class="row quiz-area">
             <h1>Question 4</h1>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
             <div class="col-xs-12 col-md-6">
                 <p>What is 4 + 4?</p>
                 <button id="last-q-1" type="button" class="btn btn-outline-primary incorrect">10</button>
@@ -86,18 +84,15 @@
                 <button id="last-q-3" type="button" id="correct4" class="btn btn-outline-primary correct">8</button>
                 <button id="last-q-4" type="button" class="btn btn-outline-primary incorrect">7</button>
             </div>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
         </div>
-        <div class="row quiz-area2" id="">
-            <h1>TJ's Coding Quiz - Enter Your Initials</h1>
-            <div class="col-xs-0 col-md-3"></div>
+        <div class="row quiz-area">
             
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
+            <h1>TJ's Coding Quiz - Enter Your Initials</h1>
             <div class="col-xs-12 col-md-6">
-                <p>Try to answer the following coding related questions before time runs out. Each incorrect answer will
-                    reduce the amount of time left by 5 seconds.
-                </p>
-
-                <form id="highscore-form" action="">
+                
+                <form id="highscore-form">
                     <label for="initials">Enter Initials:</label>
                     <input name="" id="initials" cols="30" rows="1"></input>
                     <br>
@@ -105,21 +100,18 @@
                 </form>
               
             </div>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
         </div>
-        <!-- <div class="row quiz-area" id="high-scores">
+        <div class="row quiz-area" id="high-scores">
             <h1>TJ's Coding Quiz - High Scores</h1>
-            <div class="col-xs-0 col-md-3"></div>
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
             <div class="col-xs-12 col-md-6">
-                <ol>
-                    <li>4</li>
-                    <li>3</li>
-                    <li>2</li>
-                    <li>1</li>              
-                </ol>
+               <ol id="high-scores-list">
+
+               </ol>
             </div>
-            <div class="col-xs-0 col-md-3"></div>
-        </div> -->
+            <!-- <div class="col-xs-0 col-md-3"></div> -->
+        </div>
         
     </div>
  

@@ -11,7 +11,6 @@ var lastQ4 = document.getElementById("last-q-4");
 
 var submitButton = document.getElementById("submit-button");
 
-
 // High Scores Variable 
 var highScores = document.getElementById("scores-link");
 var highScoresDiv = document.getElementById("high-scores");
@@ -68,8 +67,6 @@ function changeQ() {
     removePrevious.classList.remove("active");
   }
 
-
-
 //Remove all active class
 function scoreScreen() {
     console.log("hey there bud");
@@ -91,8 +88,6 @@ function setTime() {
     secondsLeft--;
     timeEl.textContent = secondsLeft;
 
-
-
     if(secondsLeft <= 0) {
       // Stops execution of action at set interval
       secondsLeft = 0;
@@ -105,7 +100,6 @@ function setTime() {
 }
 
 //Event Listeners: 
-
     // Runs setTime function on Start Button Click
     startButton.addEventListener("click", setTime);
 
@@ -115,43 +109,20 @@ function setTime() {
     // Submit Button 
     submitButton.addEventListener("click", getInitials);
 
-    // 
+    // Last Question Buttons 
+    lastQ1.addEventListener("click", finalScore);
+    lastQ2.addEventListener("click", finalScore);
+    lastQ3.addEventListener("click", finalScore);
+    lastQ4.addEventListener("click", finalScore);
+
+    // Get Form Initials and call store high scores function adding arguments to it. 
     function getInitials(event) {
         event.preventDefault();
         var initialsText = document.getElementById("initials").value;
         var newScore = secondsLeft;
         storeHighscores(initialsText, newScore);
+        changeQ();
     };
-
-    
-  
-
-    // getInitials function
-
-    // function getInitials(event) {
-    //     event.preventDefault();
-    //     var initialsText = document.getElementById("initials").textContent;
-    //     return initialsText;
-    // };
-
-    
-
-// TO DO 
-
-// Subtract 5 seconds from the timer when an incorrect answer is selected.  CHECK
-
-// Append a message underneath the question to say whether correct or incorrect. Use set time out to then call the next function and switch to the next screen.
-
-// Keep track of scores and fill into the high scores list.
-
-// Link High Scores link to the high scores page CHECK
-
-// Add correct answers to an array and get index to display as high score
-
-lastQ1.addEventListener("click", finalScore);
-lastQ2.addEventListener("click", finalScore);
-lastQ3.addEventListener("click", finalScore);
-lastQ4.addEventListener("click", finalScore);
 
 var yourScore;
 
@@ -159,31 +130,22 @@ function finalScore(){
     yourScore = secondsLeft;
     clearInterval(timerInterval);
     var form = document.getElementById("highscore-form");
-    // make form show up
-    form.setAttribute("style", "display: inline");
-    document.body.appendChild(form)
     console.log(yourScore);
-
 };
 
-// High Scores Empty Array
+// High Scores Array
 var highScoresArray = [];
-console.log(highScoresArray);
 
 // High Scores Get Item
-
 if (localStorage.getItem("High Scores")) {
     highScoresArray = JSON.parse(localStorage.getItem("High Scores"));
 };
 
-console.log(highScoresArray);
-
-
+// Store Score to Local Storage and push to High Scores Array
 function storeHighscores(initials, score){
     var getScore = {
         Initials: initials,
         Score: score
-        
     };
     console.log(highScoresArray);
     highScoresArray.push(getScore);
@@ -191,9 +153,10 @@ function storeHighscores(initials, score){
     localStorage.setItem("High Scores", JSON.stringify(highScoresArray));
     console.log(getScore);
 };
+
+
     // get the values from high score and initials
 
-    // put them into the array with .push the final time and the intiails submitted in a form of an object. when hit enter push object into array, push initials and {intiails: variable, score: variable}
     // can update this array to update high scores page
     // after push into an array then 
     // use document ready and if statement to look into local storage 
